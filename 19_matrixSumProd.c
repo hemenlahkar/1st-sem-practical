@@ -95,6 +95,8 @@ int main()
 
     prod = multiplyMatrix(A, ra, ca, B, rb, cb);
     sum = addMatrix(A, ra, ca, B, rb, cb);
+    freeMatrix(A, ra);
+    freeMatrix(B, rb);
 
     if (prod != NULL)
     {
@@ -103,6 +105,8 @@ int main()
     }
     else
         printf("The matrices are incompatible for multiplication");
+    freeMatrix(prod, ra);
+    
     if (sum != NULL)
     {
         printf("The addition of the matrices are:\n");
@@ -110,5 +114,6 @@ int main()
     }
     else
         printf("The matrices aren't compatible for addition!\n");
+    freeMatrix(sum, ra);
     return 0;
 }
