@@ -16,6 +16,8 @@ int main()
     }
     for (int i = 0; i < n; i++)
         sum += ptr[i];
+    free(ptr);
     printf("\nThe sum of the entered numbers is: %d\n", sum);
+    free(sum);
     return 0;
 }
