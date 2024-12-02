@@ -20,7 +20,7 @@ void printOdd(int *arr, int n)
 
 void printSumAvg(int *arr, int n)
 {
-    int sum;
+    int sum = 0;
     float avg;
     for (int i = 0; i < n; i++)
         sum += arr[i];
@@ -101,6 +101,7 @@ jump:
         printf("8. quit the program\n");
         printf("\nEnter the option: ");
         scanf("%d", &x);
+        fflush(stdin);
         switch (x)
         {
         case 1:
